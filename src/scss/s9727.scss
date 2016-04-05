@@ -1,0 +1,229 @@
+@charset "utf-8";
+@import "compass";
+@import "compass/css3";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+
+$base_bg_color : #dbdbdb;
+$gray_color : #4C4C4C;
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background: $base_bg_color;
+    background-size: cover;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.panel {
+    padding : 2em;
+    width:100%;
+    min-height: 500px;
+    height:auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10em;
+    padding-top: 5em;
+    .site_title_sub {
+        margin: 0 0 30px;
+        left-spacing: 1px;
+        font-size: 2.2 rem;
+    }
+
+    .site_title_sub::before,
+    .site_title_sub::after {
+        content: "";
+        display: inline-block;
+        width: 140px;
+        height: 20px;
+        margin: 0 30px;
+        background-color: #fff;
+        vertical-align: middle;
+    }
+
+    .site_title {
+        margin: 50px 0 40px;
+        font-size: 3.6rem;
+    }
+    .skill_table{
+        display: table;
+        vertical-align: top;
+        width: 80%;
+        margin: 50px auto 0;
+        table-layout: fixed;
+
+        .skillbox {
+            display: table-cell;
+            ul {
+                margin: 0;
+                padding: 1em;
+                list-style-type: none;
+            }
+            li {
+                float: left;
+                width: auto;
+                margin-right: 0.5em;
+                margin-top: 0.5em;
+                background-color: #434343;
+                text-align: center;
+                border-radius: 0.8em;
+                padding: .8em;
+            }
+        }
+        .skill_title {
+            margin: 0 20px 20px;
+            font-size: 2rem;
+        }
+        .skill_tag {
+            margin: 0 20px;
+            line-height: 1.3;
+        }
+        .skill_text {
+            text-align: left;
+        }
+    }
+
+    .heading {
+        position: relative;
+        display: inline-block;
+        margin: 30px 0 15px;
+        padding-bottom: 15px;
+        letter-spacing: 2px;
+        font-size: 4rem;
+        ::before,
+        ::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid #999;
+        }
+        ::before {
+            bottom: 5px;
+        }
+    }
+    .goodbye {
+        color:$gray_color;
+        font-weight: bold;
+        opacity: 0;
+    }
+}
+
+#header {
+    width: 100%;
+    min-height: 500px;
+
+    @include perspective(50px);
+    @include transform-origin( 50% 100% );
+    padding: 30px 30px 80px;
+    position: fixed;
+    top:0;
+    .dot {
+        position: fixed;
+        width: 30px;
+        height: 30px;
+    }
+    .greeting{
+        padding-top: 3em;
+        opacity: 0;
+        width: 100%;
+    }
+    .greeting_exp {
+        padding-top: 3em;
+        opacity: 0;
+        font-size: 2rem;
+        color: $gray_color;
+    }
+}
+
+#about {
+    margin-top:600px;
+    @include background(linear-gradient(-45deg, rgba(246, 255, 0, .7), rgba(255, 0, 161, .7)), url(../images/photo1.jpg));
+    background-size:cover;
+    img {
+        margin: 3rem 3rem 3rem 3rem;
+        width: 150px;
+        height:150px;
+        @include border-radius(150px);
+    }
+    .about_title {
+        margin: 0 1em 1em;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .job_title {
+        font-size: 1rem;
+        margin: 1em;
+        line-height: 1.5;
+        text-align: center;
+    }
+    .about_text {
+        margin: 1em;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+#dev {
+    background-color: #fff;
+    @include background(linear-gradient(-45deg, rgba(112, 225, 245, .6), rgba(255, 179, 102, .6)), url(../images/photo2.jpg));
+    background-size:cover;
+}
+#uiux {
+    @include background(linear-gradient(-45deg, rgba(60, 165, 92, .7), rgba(181, 172, 73, .7)), url(../images/photo3.jpg));
+    background-size:cover;
+}
+#contact {
+    @include background(linear-gradient(-45deg, rgba(0, 84, 169, .8), rgba(32, 176, 175, .8)), url(../images/photo4.jpg));
+    background-size:cover;
+    .icon {
+        padding: 2em;
+    }
+}
+
+
+#train_wrapper{
+    position: absolute;
+    bottom:0;
+    overflow: hidden;
+    width:3000px;
+    float: right;
+    left : 0;
+    img {
+        height: 4em;
+    }
+    .train_right {
+        width:auto;
+        padding-right: 0.1em;
+        padding-left: 0.1em;
+        display: table-cell;
+    }
+    .train_middle {
+        width:auto;
+        padding-right: 0.1em;
+        padding-left: 0.1em;
+        display: table-cell;
+    }
+    .train_left {
+        width:auto;
+        padding-right: 0.1em;
+        padding-left: 0.1em;
+        display: table-cell;
+        img {
+            @include transform( scaleX(-1));
+        }
+    }
+}

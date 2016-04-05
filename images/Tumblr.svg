@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Tumblr</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,0 L72,0 L72,72 L0,72 L0,0 Z M23.96875,24.9003906 L23.96875,30.6789784 L28.0684397,30.6789784 L28.0684397,44.2276892 C28.0684397,44.2276892 27.4589844,48.4560547 30.1787109,52.3828125 C32.8984375,56.3095703 37.1513672,56.7558594 39.5869141,56.7558594 C42.0224609,56.7558594 49.1679688,54.7001953 49.1679688,54.7001953 L47.3632812,47.8710938 C47.3632812,47.8710938 45.296875,49.1757813 43.5566406,49.1757813 C41.8164062,49.1757813 39.9248047,46.5654297 39.9248047,46.5654297 L39.9248047,30.4258217 L48.2822798,30.4258217 L48.2822798,23.7017805 L40.1962874,23.7017805 L40.1962874,12.3311617 L32.1495407,12.3311617 C32.1495407,12.3311617 31.7284355,18.7265623 29.8984375,20.4443359 C28.0684395,22.1621096 23.96875,24.9003906 23.96875,24.9003906 Z" id="path-1"></path>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-621.000000, -453.000000)">
+            <g id="Tumblr" transform="translate(621.000000, 453.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#FFFFFF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
