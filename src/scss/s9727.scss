@@ -241,7 +241,7 @@ footer {
     .panel {
         padding: 1em 2em 3em 2em;
         .heading {
-            margin: .5em 0 0 0;
+            margin: 1em 0 0 0;
             font-size: 2.8rem;
         }
         .skill_row {
@@ -285,4 +285,17 @@ footer {
         }
 
     }
+    footer {
+        padding-top: 10em;
+        display:inline;
+        height: 500px;
+        .goodbye {
+            color:$gray_color;
+            font-weight: bold;
+            font-size: 4rem;
+            opacity: 0;
+            padding-top : 5em;
+        }
+    }
+
 }
