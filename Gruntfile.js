@@ -74,15 +74,14 @@ module.exports = function(grunt){
 //                dest: 'script/concat/hogehoge.js'
 //            }
 //        },
-        imagemin: {
-            target: {
-                files: [{
-                    expand: true,
-                    src: ['images/**/*.{png,jpg,gif}'],
-                    dest: 'dist'
-                }]
-            }
-        },
+//        imagemin: {
+//            target: {
+//                files: [{
+//                    expand: true,
+//                    src: ['images/**.{png,jpg,gif}']
+//                }]
+//            }
+//        },
         watch: {
             compass: {
                 files: ['src/scss/**/*.scss'],

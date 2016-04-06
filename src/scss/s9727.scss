@@ -190,14 +190,15 @@ body {
         float: left;
         list-style: none;
         padding: 2em;
-        width: auto;
+        width: 4em;
+        height: 4em;
     }
 
     #train_wrapper{
         position: absolute;
         bottom:0;
         overflow: hidden;
-        width:3000px;
+        width:auto;
         float: right;
         left : 0;
         img {

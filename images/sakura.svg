@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="36px" height="56px" viewBox="0 0 36 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="35px" height="55px" viewBox="0 0 35 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
     <title>sakura</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop" transform="translate(-188.000000, -339.000000)" fill="#FF97B4">
-            <path d="M198.28125,339.441406 L206.375,350.998047 L215.234375,339.441406 C215.234375,339.441406 223.349609,351.839844 223.349609,361.890625 C223.349609,371.941406 206.375,394.197266 206.375,394.197266 C206.375,394.197266 188.714844,374.203125 188.714844,361.890625 C188.714844,349.578125 198.28125,339.441406 198.28125,339.441406 Z" id="sakura"></path>
+        <g id="Desktop" transform="translate(-109.000000, -270.000000)" fill="#FFDBE5">
+            <path d="M118.566406,270 L126.660156,281.556641 L135.519531,270 C135.519531,270 143.634766,282.398438 143.634766,292.449219 C143.634766,302.5 126.660156,324.755859 126.660156,324.755859 C126.660156,324.755859 109,304.761719 109,292.449219 C109,280.136719 118.566406,270 118.566406,270 Z" id="sakura"></path>
         </g>
     </g>
 </svg>

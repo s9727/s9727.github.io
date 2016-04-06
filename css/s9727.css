@@ -230,43 +230,44 @@ body {
   float: left;
   list-style: none;
   padding: 2em;
-  width: auto;
+  width: 4em;
+  height: 4em;
 }
-/* line 196, ../src/scss/s9727.scss */
+/* line 197, ../src/scss/s9727.scss */
 #contact #train_wrapper {
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  width: 3000px;
+  width: auto;
   float: right;
   left: 0;
 }
-/* line 203, ../src/scss/s9727.scss */
+/* line 204, ../src/scss/s9727.scss */
 #contact #train_wrapper img {
   height: 4em;
 }
-/* line 206, ../src/scss/s9727.scss */
+/* line 207, ../src/scss/s9727.scss */
 #contact #train_wrapper .train_right {
   width: auto;
   padding-right: 0.1em;
   padding-left: 0.1em;
   display: table-cell;
 }
-/* line 212, ../src/scss/s9727.scss */
+/* line 213, ../src/scss/s9727.scss */
 #contact #train_wrapper .train_middle {
   width: auto;
   padding-right: 0.1em;
   padding-left: 0.1em;
   display: table-cell;
 }
-/* line 218, ../src/scss/s9727.scss */
+/* line 219, ../src/scss/s9727.scss */
 #contact #train_wrapper .train_left {
   width: auto;
   padding-right: 0.1em;
   padding-left: 0.1em;
   display: table-cell;
 }
-/* line 223, ../src/scss/s9727.scss */
+/* line 224, ../src/scss/s9727.scss */
 #contact #train_wrapper .train_left img {
   -moz-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
@@ -274,11 +275,11 @@ body {
   transform: scaleX(-1);
 }
 
-/* line 229, ../src/scss/s9727.scss */
+/* line 230, ../src/scss/s9727.scss */
 footer {
   padding: 0em;
 }
-/* line 230, ../src/scss/s9727.scss */
+/* line 231, ../src/scss/s9727.scss */
 footer .goodbye {
   color: #4C4C4C;
   font-weight: bold;
@@ -288,49 +289,49 @@ footer .goodbye {
 }
 
 @media (max-width: 768px) {
-  /* line 242, ../src/scss/s9727.scss */
+  /* line 243, ../src/scss/s9727.scss */
   body {
     font-size: 1.3rem;
   }
 
-  /* line 245, ../src/scss/s9727.scss */
+  /* line 246, ../src/scss/s9727.scss */
   .heading {
     margin-top: 20px;
     font-size: 2.5rem;
   }
 
-  /* line 250, ../src/scss/s9727.scss */
+  /* line 251, ../src/scss/s9727.scss */
   .panel {
     padding: 1em;
     padding-bottom: 2em;
   }
-  /* line 253, ../src/scss/s9727.scss */
+  /* line 254, ../src/scss/s9727.scss */
   .panel .skill_row {
     width: 100%;
   }
-  /* line 255, ../src/scss/s9727.scss */
+  /* line 256, ../src/scss/s9727.scss */
   .panel .skill_row .skill_col {
     margin-top: 1em;
     text-align: center;
     width: 100%;
   }
 
-  /* line 262, ../src/scss/s9727.scss */
+  /* line 263, ../src/scss/s9727.scss */
   .header {
     padding-top: 60px;
   }
 
-  /* line 265, ../src/scss/s9727.scss */
+  /* line 266, ../src/scss/s9727.scss */
   .site-title-sub {
     font-size: 1.7rem;
   }
 
-  /* line 268, ../src/scss/s9727.scss */
+  /* line 269, ../src/scss/s9727.scss */
   #contact {
     height: auto;
     overflow: visible;
   }
-  /* line 271, ../src/scss/s9727.scss */
+  /* line 272, ../src/scss/s9727.scss */
   #contact ul {
     position: absolute;
     left: 0;
@@ -339,7 +340,7 @@ footer .goodbye {
     width: 100%;
     padding: 0;
   }
-  /* line 279, ../src/scss/s9727.scss */
+  /* line 280, ../src/scss/s9727.scss */
   #contact ul li {
     position: relative;
     left: 0%;
@@ -348,7 +349,7 @@ footer .goodbye {
     width: 50%;
   }
 
-  /* line 287, ../src/scss/s9727.scss */
+  /* line 288, ../src/scss/s9727.scss */
   footer {
     padding: 1em;
   }
