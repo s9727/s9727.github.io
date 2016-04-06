@@ -2,22 +2,23 @@
 
 
 $.Velocity.defaults.easing = "easeInOutsine";
-var petalCount = 40,
+var petalCount = 50,
     petalsHtml = "";
 var screenWidth = window.screen.availWidth,
     screenHeight = window.screen.availHeight,
     chromeHeight = screenHeight - (document.documentElement.clientHeight || screenHeight);
-var translateZMin = -725,
-    translateZMax = 600;
+var translateZMin = -700,
+    translateZMax = 700;
 
 var containerAnimationMap = {
-    perspective: [ 215, 50 ]
+    perspective: [ 50 , 215]
 };
 
-$("#header").css("height", screenHeight * 0.95 + "px");
+$("#header_frame").css("height", screenHeight * 0.9 + "px");
+console.log(screenHeight);
 
 for (var i = 0; i < petalCount; i++) {
-    petalsHtml += "<div class='dot'><img src='images/sakura.svg' class='sakura' /></div>";
+    petalsHtml += "<div class='petal'><img src='images/sakura.svg' class='sakura' /></div>";
 }
 $petals = $(petalsHtml);
 
@@ -72,18 +73,16 @@ $(".greeting").velocity({
 
 
 // tags
-var scrollHeight = 40;
+var scrollHeight = 30;
 $("#uiux,#dev").each(function(){
     var target = $(this).attr("id");
-    var tags = $(this).find(".skill_table>.skillbox>.skill_tag>li");
+    var tags = $(this).find(".skill_tags>li").get().reverse();
     var st = tags.length * scrollHeight ;
     var ed = st - scrollHeight;
     console.log(st + ":" + ed);
-    tags.each(function(){
+    $(tags).each(function(){
         //console.log($(this).html());
         $(this).attr("data-anchor-target", "#" + target);
-        //        $(this).attr("data-" + st + "-top", "display:none;");
-        //        $(this).attr("data-" + ed + "-bottom", "display:block;");
         $(this).attr("data-" + st + "-top", "opacity:0;");
         $(this).attr("data-" + ed + "-bottom", "opacity:1;");
         st = st - scrollHeight;

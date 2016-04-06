@@ -28,14 +28,11 @@ body {
 }
 
 .panel {
-    padding : 2em;
+    padding: 5em 2em 8em 2em;
     width:100%;
-    min-height: 500px;
+    min-height: 400px;
     height:auto;
     position: relative;
-    overflow: hidden;
-    padding-bottom: 10em;
-    padding-top: 5em;
     .site_title_sub {
         margin: 0 0 30px;
         left-spacing: 1px;
@@ -57,41 +54,32 @@ body {
         margin: 50px 0 40px;
         font-size: 3.6rem;
     }
-    .skill_table{
-        display: table;
-        vertical-align: top;
-        width: 80%;
-        margin: 50px auto 0;
-        table-layout: fixed;
-
-        .skillbox {
-            display: table-cell;
-            ul {
-                margin: 0;
-                padding: 1em;
-                list-style-type: none;
-            }
-            li {
-                float: left;
-                width: auto;
-                margin-right: 0.5em;
-                margin-top: 0.5em;
-                background-color: #434343;
-                text-align: center;
-                border-radius: 0.8em;
-                padding: .8em;
-            }
-        }
-        .skill_title {
-            margin: 0 20px 20px;
-            font-size: 2rem;
-        }
-        .skill_tag {
-            margin: 0 20px;
-            line-height: 1.3;
-        }
-        .skill_text {
+    .skill_row {
+        width:100%;
+        .skill_col {
+            width :50%;
+            float: left;
             text-align: left;
+            .skill_tags {
+                margin: 0;
+                padding: 0 1em 0 0;
+                list-style-type: none;
+                li {
+                    float: left;
+                    width: auto;
+                    margin-right: .3em;
+                    margin-bottom: .5em;
+                    background-color: #434343;
+                    text-align: center;
+                    border-radius: 0.8em;
+                    padding: .8em 1em .8em 1em;
+                    opacity: 0;
+                }
+            }
+        }
+        .clear {
+            clear: both;
+            height: 1px;
         }
     }
 
@@ -115,42 +103,40 @@ body {
             bottom: 5px;
         }
     }
-    .goodbye {
-        color:$gray_color;
-        font-weight: bold;
-        opacity: 0;
-    }
 }
 
 #header {
     width: 100%;
     min-height: 500px;
-
     @include perspective(50px);
     @include transform-origin( 50% 100% );
-    padding: 30px 30px 80px;
+    padding: 30px;
     position: fixed;
     top:0;
-    .dot {
+    .petal {
         position: fixed;
-        width: 30px;
-        height: 30px;
+        width: 4em;
+        height: 4em;
     }
     .greeting{
         padding-top: 3em;
         opacity: 0;
         width: 100%;
     }
-    .greeting_exp {
-        padding-top: 3em;
+    .goodbye {
+        color:$gray_color;
+        font-weight: bold;
+        font-size: 4rem;
         opacity: 0;
-        font-size: 2rem;
-        color: $gray_color;
+        padding : 3em;
     }
 }
 
+#header_frame {
+    height: 500px;
+}
+
 #about {
-    margin-top:600px;
     @include background(linear-gradient(-45deg, rgba(246, 255, 0, .7), rgba(255, 0, 161, .7)), url(../images/photo1.jpg));
     background-size:cover;
     img {
@@ -189,41 +175,116 @@ body {
 #contact {
     @include background(linear-gradient(-45deg, rgba(0, 84, 169, .8), rgba(32, 176, 175, .8)), url(../images/photo4.jpg));
     background-size:cover;
-    .icon {
-        padding: 2em;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    ul {
+        position: relative;
+        left: 50%; /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+        float: left;
     }
+
+    ul li {
+        position: relative;
+        left: -50%;
+        float: left;
+        list-style: none;
+        padding: 2em;
+        width: auto;
+    }
+
+    #train_wrapper{
+        position: absolute;
+        bottom:0;
+        overflow: hidden;
+        width:3000px;
+        float: right;
+        left : 0;
+        img {
+            height: 4em;
+        }
+        .train_right {
+            width:auto;
+            padding-right: 0.1em;
+            padding-left: 0.1em;
+            display: table-cell;
+        }
+        .train_middle {
+            width:auto;
+            padding-right: 0.1em;
+            padding-left: 0.1em;
+            display: table-cell;
+        }
+        .train_left {
+            width:auto;
+            padding-right: 0.1em;
+            padding-left: 0.1em;
+            display: table-cell;
+            img {
+                @include transform( scaleX(-1));
+            }
+        }
+    }
+}
+footer {
+    .goodbye {
+        color:$gray_color;
+        font-weight: bold;
+        font-size: 4rem;
+        opacity: 0;
+        padding : 3em;
+    }
+    padding: 0em;
 }
 
 
-#train_wrapper{
-    position: absolute;
-    bottom:0;
-    overflow: hidden;
-    width:3000px;
-    float: right;
-    left : 0;
-    img {
-        height: 4em;
+@media (max-width: 768px) {
+    body {
+        font-size: 1.3rem;
     }
-    .train_right {
-        width:auto;
-        padding-right: 0.1em;
-        padding-left: 0.1em;
-        display: table-cell;
+    .heading {
+        margin-top: 20px;
+        font-size: 2.5rem;
     }
-    .train_middle {
-        width:auto;
-        padding-right: 0.1em;
-        padding-left: 0.1em;
-        display: table-cell;
-    }
-    .train_left {
-        width:auto;
-        padding-right: 0.1em;
-        padding-left: 0.1em;
-        display: table-cell;
-        img {
-            @include transform( scaleX(-1));
+
+    .panel {
+        padding: 1em;
+        padding-bottom: 2em;
+        .skill_row {
+            width:100%;
+            .skill_col {
+                margin-top: 1em;
+                text-align: center;
+                width :100%;
+            }
         }
+    }
+    .header {
+        padding-top: 60px;
+    }
+    .site-title-sub {
+        font-size: 1.7rem;
+    }
+    #contact {
+        height: auto;
+        overflow: visible;
+        ul {
+            position:absolute;
+            left: 0; /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+            float: left;
+            width :100%;
+            padding: 0;
+        }
+
+        ul li {
+            position: relative;
+            left: 0%;
+            float: left;
+            padding: 2em;
+            width: 50%;
+        }
+    }
+    footer {
+        padding: 1em;
     }
 }

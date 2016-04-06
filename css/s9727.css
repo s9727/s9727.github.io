@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 10, ../src/scss/s9727.scss */
 html {
   font-size: 62.5%;
@@ -22,22 +23,19 @@ body {
 
 /* line 30, ../src/scss/s9727.scss */
 .panel {
-  padding: 2em;
+  padding: 5em 2em 8em 2em;
   width: 100%;
-  min-height: 500px;
+  min-height: 400px;
   height: auto;
   position: relative;
-  overflow: hidden;
-  padding-bottom: 10em;
-  padding-top: 5em;
 }
-/* line 39, ../src/scss/s9727.scss */
+/* line 36, ../src/scss/s9727.scss */
 .panel .site_title_sub {
   margin: 0 0 30px;
   left-spacing: 1px;
   font-size: 2.2 rem;
 }
-/* line 45, ../src/scss/s9727.scss */
+/* line 42, ../src/scss/s9727.scss */
 .panel .site_title_sub::before,
 .panel .site_title_sub::after {
   content: "";
@@ -48,55 +46,45 @@ body {
   background-color: #fff;
   vertical-align: middle;
 }
-/* line 56, ../src/scss/s9727.scss */
+/* line 53, ../src/scss/s9727.scss */
 .panel .site_title {
   margin: 50px 0 40px;
   font-size: 3.6rem;
 }
-/* line 60, ../src/scss/s9727.scss */
-.panel .skill_table {
-  display: table;
-  vertical-align: top;
-  width: 80%;
-  margin: 50px auto 0;
-  table-layout: fixed;
+/* line 57, ../src/scss/s9727.scss */
+.panel .skill_row {
+  width: 100%;
 }
-/* line 67, ../src/scss/s9727.scss */
-.panel .skill_table .skillbox {
-  display: table-cell;
+/* line 59, ../src/scss/s9727.scss */
+.panel .skill_row .skill_col {
+  width: 50%;
+  float: left;
+  text-align: left;
 }
-/* line 69, ../src/scss/s9727.scss */
-.panel .skill_table .skillbox ul {
+/* line 63, ../src/scss/s9727.scss */
+.panel .skill_row .skill_col .skill_tags {
   margin: 0;
-  padding: 1em;
+  padding: 0 1em 0 0;
   list-style-type: none;
 }
-/* line 74, ../src/scss/s9727.scss */
-.panel .skill_table .skillbox li {
+/* line 67, ../src/scss/s9727.scss */
+.panel .skill_row .skill_col .skill_tags li {
   float: left;
   width: auto;
-  margin-right: 0.5em;
-  margin-top: 0.5em;
+  margin-right: .3em;
+  margin-bottom: .5em;
   background-color: #434343;
   text-align: center;
   border-radius: 0.8em;
-  padding: .8em;
+  padding: .8em 1em .8em 1em;
+  opacity: 0;
 }
-/* line 85, ../src/scss/s9727.scss */
-.panel .skill_table .skill_title {
-  margin: 0 20px 20px;
-  font-size: 2rem;
+/* line 80, ../src/scss/s9727.scss */
+.panel .skill_row .clear {
+  clear: both;
+  height: 1px;
 }
-/* line 89, ../src/scss/s9727.scss */
-.panel .skill_table .skill_tag {
-  margin: 0 20px;
-  line-height: 1.3;
-}
-/* line 93, ../src/scss/s9727.scss */
-.panel .skill_table .skill_text {
-  text-align: left;
-}
-/* line 98, ../src/scss/s9727.scss */
+/* line 86, ../src/scss/s9727.scss */
 .panel .heading {
   position: relative;
   display: inline-block;
@@ -105,7 +93,7 @@ body {
   letter-spacing: 2px;
   font-size: 4rem;
 }
-/* line 105, ../src/scss/s9727.scss */
+/* line 93, ../src/scss/s9727.scss */
 .panel .heading ::before,
 .panel .heading ::after {
   content: '';
@@ -115,18 +103,12 @@ body {
   left: 0;
   border-bottom: 1px solid #999;
 }
-/* line 114, ../src/scss/s9727.scss */
+/* line 102, ../src/scss/s9727.scss */
 .panel .heading ::before {
   bottom: 5px;
 }
-/* line 118, ../src/scss/s9727.scss */
-.panel .goodbye {
-  color: #4C4C4C;
-  font-weight: bold;
-  opacity: 0;
-}
 
-/* line 125, ../src/scss/s9727.scss */
+/* line 108, ../src/scss/s9727.scss */
 #header {
   width: 100%;
   min-height: 500px;
@@ -137,40 +119,45 @@ body {
   -ms-transform-origin: 50% 100% 50%;
   -webkit-transform-origin: 50% 100% 50%;
   transform-origin: 50% 100% 50%;
-  padding: 30px 30px 80px;
+  padding: 30px;
   position: fixed;
   top: 0;
 }
-/* line 134, ../src/scss/s9727.scss */
-#header .dot {
+/* line 116, ../src/scss/s9727.scss */
+#header .petal {
   position: fixed;
-  width: 30px;
-  height: 30px;
+  width: 4em;
+  height: 4em;
 }
-/* line 139, ../src/scss/s9727.scss */
+/* line 121, ../src/scss/s9727.scss */
 #header .greeting {
   padding-top: 3em;
   opacity: 0;
   width: 100%;
 }
-/* line 144, ../src/scss/s9727.scss */
-#header .greeting_exp {
-  padding-top: 3em;
-  opacity: 0;
-  font-size: 2rem;
+/* line 126, ../src/scss/s9727.scss */
+#header .goodbye {
   color: #4C4C4C;
+  font-weight: bold;
+  font-size: 4rem;
+  opacity: 0;
+  padding: 3em;
 }
 
-/* line 152, ../src/scss/s9727.scss */
+/* line 135, ../src/scss/s9727.scss */
+#header_frame {
+  height: 500px;
+}
+
+/* line 139, ../src/scss/s9727.scss */
 #about {
-  margin-top: 600px;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjEuMCIgeDI9IjAuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZmYwMCIgc3RvcC1vcGFjaXR5PSIwLjciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjAwYTEiIHN0b3Atb3BhY2l0eT0iMC43Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url(../images/photo1.jpg);
   background: -moz-linear-gradient(135deg, rgba(246, 255, 0, 0.7), rgba(255, 0, 161, 0.7)), url(../images/photo1.jpg);
   background: -webkit-linear-gradient(135deg, rgba(246, 255, 0, 0.7), rgba(255, 0, 161, 0.7)), url(../images/photo1.jpg);
   background: linear-gradient(-45deg, rgba(246, 255, 0, 0.7), rgba(255, 0, 161, 0.7)), url(../images/photo1.jpg);
   background-size: cover;
 }
-/* line 156, ../src/scss/s9727.scss */
+/* line 142, ../src/scss/s9727.scss */
 #about img {
   margin: 3rem 3rem 3rem 3rem;
   width: 150px;
@@ -179,27 +166,27 @@ body {
   -webkit-border-radius: 150px;
   border-radius: 150px;
 }
-/* line 162, ../src/scss/s9727.scss */
+/* line 148, ../src/scss/s9727.scss */
 #about .about_title {
   margin: 0 1em 1em;
   font-size: 2rem;
   font-weight: bold;
 }
-/* line 167, ../src/scss/s9727.scss */
+/* line 153, ../src/scss/s9727.scss */
 #about .job_title {
   font-size: 1rem;
   margin: 1em;
   line-height: 1.5;
   text-align: center;
 }
-/* line 173, ../src/scss/s9727.scss */
+/* line 159, ../src/scss/s9727.scss */
 #about .about_text {
   margin: 1em;
   line-height: 1.5;
   text-align: center;
 }
 
-/* line 180, ../src/scss/s9727.scss */
+/* line 166, ../src/scss/s9727.scss */
 #dev {
   background-color: #fff;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjEuMCIgeDI9IjAuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzcwZTFmNSIgc3RvcC1vcGFjaXR5PSIwLjYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmIzNjYiIHN0b3Atb3BhY2l0eT0iMC42Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url(../images/photo2.jpg);
@@ -209,7 +196,7 @@ body {
   background-size: cover;
 }
 
-/* line 185, ../src/scss/s9727.scss */
+/* line 171, ../src/scss/s9727.scss */
 #uiux {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjEuMCIgeDI9IjAuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNjYTU1YyIgc3RvcC1vcGFjaXR5PSIwLjciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiNWFjNDkiIHN0b3Atb3BhY2l0eT0iMC43Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url(../images/photo3.jpg);
   background: -moz-linear-gradient(135deg, rgba(60, 165, 92, 0.7), rgba(181, 172, 73, 0.7)), url(../images/photo3.jpg);
@@ -218,21 +205,35 @@ body {
   background-size: cover;
 }
 
-/* line 189, ../src/scss/s9727.scss */
+/* line 175, ../src/scss/s9727.scss */
 #contact {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjEuMCIgeDI9IjAuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNTRhOSIgc3RvcC1vcGFjaXR5PSIwLjgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMGIwYWYiIHN0b3Atb3BhY2l0eT0iMC44Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url(../images/photo4.jpg);
   background: -moz-linear-gradient(135deg, rgba(0, 84, 169, 0.8), rgba(32, 176, 175, 0.8)), url(../images/photo4.jpg);
   background: -webkit-linear-gradient(135deg, rgba(0, 84, 169, 0.8), rgba(32, 176, 175, 0.8)), url(../images/photo4.jpg);
   background: linear-gradient(-45deg, rgba(0, 84, 169, 0.8), rgba(32, 176, 175, 0.8)), url(../images/photo4.jpg);
   background-size: cover;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
 }
-/* line 192, ../src/scss/s9727.scss */
-#contact .icon {
+/* line 181, ../src/scss/s9727.scss */
+#contact ul {
+  position: relative;
+  left: 50%;
+  /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+  float: left;
+}
+/* line 187, ../src/scss/s9727.scss */
+#contact ul li {
+  position: relative;
+  left: -50%;
+  float: left;
+  list-style: none;
   padding: 2em;
+  width: auto;
 }
-
-/* line 198, ../src/scss/s9727.scss */
-#train_wrapper {
+/* line 196, ../src/scss/s9727.scss */
+#contact #train_wrapper {
   position: absolute;
   bottom: 0;
   overflow: hidden;
@@ -240,37 +241,117 @@ body {
   float: right;
   left: 0;
 }
-/* line 205, ../src/scss/s9727.scss */
-#train_wrapper img {
+/* line 203, ../src/scss/s9727.scss */
+#contact #train_wrapper img {
   height: 4em;
 }
-/* line 208, ../src/scss/s9727.scss */
-#train_wrapper .train_right {
+/* line 206, ../src/scss/s9727.scss */
+#contact #train_wrapper .train_right {
   width: auto;
   padding-right: 0.1em;
   padding-left: 0.1em;
   display: table-cell;
 }
-/* line 214, ../src/scss/s9727.scss */
-#train_wrapper .train_middle {
+/* line 212, ../src/scss/s9727.scss */
+#contact #train_wrapper .train_middle {
   width: auto;
   padding-right: 0.1em;
   padding-left: 0.1em;
   display: table-cell;
 }
-/* line 220, ../src/scss/s9727.scss */
-#train_wrapper .train_left {
+/* line 218, ../src/scss/s9727.scss */
+#contact #train_wrapper .train_left {
   width: auto;
   padding-right: 0.1em;
   padding-left: 0.1em;
   display: table-cell;
 }
-/* line 225, ../src/scss/s9727.scss */
-#train_wrapper .train_left img {
+/* line 223, ../src/scss/s9727.scss */
+#contact #train_wrapper .train_left img {
   -moz-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+/* line 229, ../src/scss/s9727.scss */
+footer {
+  padding: 0em;
+}
+/* line 230, ../src/scss/s9727.scss */
+footer .goodbye {
+  color: #4C4C4C;
+  font-weight: bold;
+  font-size: 4rem;
+  opacity: 0;
+  padding: 3em;
+}
+
+@media (max-width: 768px) {
+  /* line 242, ../src/scss/s9727.scss */
+  body {
+    font-size: 1.3rem;
+  }
+
+  /* line 245, ../src/scss/s9727.scss */
+  .heading {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+
+  /* line 250, ../src/scss/s9727.scss */
+  .panel {
+    padding: 1em;
+    padding-bottom: 2em;
+  }
+  /* line 253, ../src/scss/s9727.scss */
+  .panel .skill_row {
+    width: 100%;
+  }
+  /* line 255, ../src/scss/s9727.scss */
+  .panel .skill_row .skill_col {
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* line 262, ../src/scss/s9727.scss */
+  .header {
+    padding-top: 60px;
+  }
+
+  /* line 265, ../src/scss/s9727.scss */
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+
+  /* line 268, ../src/scss/s9727.scss */
+  #contact {
+    height: auto;
+    overflow: visible;
+  }
+  /* line 271, ../src/scss/s9727.scss */
+  #contact ul {
+    position: absolute;
+    left: 0;
+    /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+    float: left;
+    width: 100%;
+    padding: 0;
+  }
+  /* line 279, ../src/scss/s9727.scss */
+  #contact ul li {
+    position: relative;
+    left: 0%;
+    float: left;
+    padding: 2em;
+    width: 50%;
+  }
+
+  /* line 287, ../src/scss/s9727.scss */
+  footer {
+    padding: 1em;
+  }
 }
 
 /*# sourceMappingURL=s9727.css.map */
