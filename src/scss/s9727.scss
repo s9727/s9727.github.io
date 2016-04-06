@@ -33,6 +33,11 @@ body {
     min-height: 400px;
     height:auto;
     position: relative;
+
+    .clear {
+        clear: both;
+        height: 1px;
+    }
     .site_title_sub {
         margin: 0 0 30px;
         left-spacing: 1px;
@@ -71,15 +76,11 @@ body {
                     margin-bottom: .5em;
                     background-color: #434343;
                     text-align: center;
-                    border-radius: 0.8em;
+                    border-radius: 0.5em;
                     padding: .8em 1em .8em 1em;
                     opacity: 0;
                 }
             }
-        }
-        .clear {
-            clear: both;
-            height: 1px;
         }
     }
 
@@ -180,7 +181,7 @@ body {
     overflow: hidden;
     ul {
         position: relative;
-        left: 50%; /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+        left: 50%;
         float: left;
     }
 
@@ -190,8 +191,9 @@ body {
         float: left;
         list-style: none;
         padding: 2em;
-        width: 4em;
-        height: 4em;
+        margin: 1em;
+        width: auto;
+        height: auto;
     }
 
     #train_wrapper{
@@ -228,14 +230,7 @@ body {
     }
 }
 footer {
-    .goodbye {
-        color:$gray_color;
-        font-weight: bold;
-        font-size: 4rem;
-        opacity: 0;
-        padding : 3em;
-    }
-    padding: 0em;
+    display: none;
 }
 
 
@@ -243,19 +238,17 @@ footer {
     body {
         font-size: 1.3rem;
     }
-    .heading {
-        margin-top: 20px;
-        font-size: 2.5rem;
-    }
-
     .panel {
-        padding: 1em;
-        padding-bottom: 2em;
+        padding: 1em 2em 3em 2em;
+        .heading {
+            margin: .5em 0 0 0;
+            font-size: 2.8rem;
+        }
         .skill_row {
             width:100%;
             .skill_col {
                 margin-top: 1em;
-                text-align: center;
+                text-align: left;
                 width :100%;
             }
         }
@@ -271,7 +264,7 @@ footer {
         overflow: visible;
         ul {
             position:absolute;
-            left: 0; /* リスト全体であるul要素を右に50%移動。つまり先頭を中央に持ってくる感じです。 */
+            left: 0;
             float: left;
             width :100%;
             padding: 0;
@@ -281,11 +274,15 @@ footer {
             position: relative;
             left: 0%;
             float: left;
-            padding: 2em;
-            width: 50%;
+            padding: 0em;
+            margin: 0 1em 0 0em;
+            width: 100%;
+            img {
+                width: 3em;
+                height: 3em;
+
+            }
         }
-    }
-    footer {
-        padding: 1em;
+
     }
 }

@@ -76,15 +76,17 @@ $(".greeting").velocity({
 var scrollHeight = 30;
 $("#uiux,#dev").each(function(){
     var target = $(this).attr("id");
-    var tags = $(this).find(".skill_tags>li").get().reverse();
+//    var tags = $(this).find(".skill_tags>li").get().reverse();
+    var tags = $(this).find(".skill_tags>li");
     var st = tags.length * scrollHeight ;
     var ed = st - scrollHeight;
     console.log(st + ":" + ed);
-    $(tags).each(function(){
+//    $(tags).each(function(){
+    tags.each(function(){
         //console.log($(this).html());
         $(this).attr("data-anchor-target", "#" + target);
         $(this).attr("data-" + st + "-top", "opacity:0;");
-        $(this).attr("data-" + ed + "-bottom", "opacity:1;");
+        $(this).attr("data-" + ed + "-top", "opacity:1;");
         st = st - scrollHeight;
         ed = ed - scrollHeight;
     });
